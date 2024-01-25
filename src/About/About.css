@@ -1,8 +1,143 @@
-.about-container {
+.about-page-container {
   height: 100vh;
-  border: 4px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid green;
+  gap: 4rem;
 }
 
-.about-container > h1 {
-  color: var(--primary-font-color);
+.about-elements-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 2rem;
+}
+
+.about-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-header-container > span {
+  border-bottom: 0.3px solid var(--primary-font-color);
+  height: 0.1px;
+  width: 92%;
+}
+
+.emoji-about-me-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-text {
+  padding: 1rem;
+}
+
+.emoji-image {
+  border-radius: 40%;
+  width: 450px;
+  height: 340px;
+  box-shadow: 4px 4px 8px rgba(182, 182, 182, 0.44);
+}
+
+/* .slide-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+  width: 500px;
+}
+
+.marquee-w {
+  border: 1px solid green;
+  display: block;
+  width: 500px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.marquee {
+  position: absolute;
+  display: block;
+  margin: auto auto;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 100%;
+  height: 100%;
+}
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  text-align: center;
+  white-space: nowrap;
+  min-width: 100%;
+  height: 100%;
+  line-height: 140px;
+  font-size: 2rem;
+  animation: marquee 8s linear infinite;
+  letter-spacing: 4px;
+}
+.marquee2 span {
+  animation-delay: 4s;
+}
+@keyframes marquee {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(-100%, 0);
+  }
+} */
+
+
+.slide-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  overflow: hidden;
+}
+
+.marquee-w {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 100%;
+  height: 100%;
+  animation: marquee 6s linear infinite;
+}
+
+.marquee > span {
+  font-size: 2rem;
+  display: inline-block; /* Added to ensure proper inline block rendering */
+  letter-spacing: 3px;
+}
+
+.marquee2 span {
+  animation-delay: 3s;
+}
+
+@keyframes marquee {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(-100%, 0);
+  }
 }

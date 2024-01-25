@@ -1,0 +1,5 @@
+.app-container {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+}

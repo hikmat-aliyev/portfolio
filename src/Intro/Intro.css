@@ -1,5 +1,4 @@
 .intro-container {
-  border: 1px solid red;
   position: relative;
   height: 100vh;
   overflow: hidden;
@@ -58,12 +57,13 @@
   cursor: pointer;
   color: var(--primary-font-color);
   font-size: 3.5rem;
+  font-weight: 200;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 1rem;
+  bottom: 2rem;
   opacity: 0; /* Initially hidden */
-  animation: expandIconAnimation 1.8s 2.4s ease-in-out infinite;
+  animation: expandIconAnimation 1.5s 2.4s ease infinite;
 }
 
 /* Keyframes for fadeIn */

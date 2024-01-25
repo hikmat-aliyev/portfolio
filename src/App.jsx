@@ -5,7 +5,7 @@ import About from './About/About'
 function App() {
 
   return (
-    <div>
+    <div className='app-container'>
       <Intro />
       <About />
     </div>
