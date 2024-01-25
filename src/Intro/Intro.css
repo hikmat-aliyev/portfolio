@@ -1,0 +1,81 @@
+.intro-container {
+  border: 1px solid red;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.intro-name, .intro-description {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: fit-content;
+  font-family: "Big Shoulders Stencil Display", sans-serif;
+  font-weight: 400;
+  color: var(--primary-font-color);
+  opacity: 0;
+}
+
+.intro-name {
+  animation: slideInName 2s ease 0.6s forwards; 
+  font-size: 4rem;
+}
+
+.intro-description {
+  animation: slideInDescription 2s ease 2s forwards; 
+  font-size: 2.5rem;
+}
+
+@keyframes slideInName {
+  0% {
+    top: -120%;
+    opacity: 0;
+
+  }
+  100% {
+    top: -10%;
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDescription {
+  0% {
+    top: -120%;
+    opacity: 0;
+  }
+  100% {
+    top: 10%;
+    opacity: 1;
+  }
+}
+
+/* Define the initial state */
+.expand-icon {
+  cursor: pointer;
+  color: var(--primary-font-color);
+  font-size: 3.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1rem;
+  opacity: 0; /* Initially hidden */
+  animation: expandIconAnimation 1.8s 2.4s ease-in-out infinite;
+}
+
+/* Keyframes for fadeIn */
+@keyframes expandIconAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
