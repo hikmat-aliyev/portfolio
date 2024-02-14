@@ -53,7 +53,7 @@ function Contact() {
         <span></span>
 
 
-        <p>Developed by Hikmat Aliyev</p>
+        <p className='developed-by-text'>Developed by Hikmat Aliyev</p>
 
       </div>
 
