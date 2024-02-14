@@ -28,7 +28,7 @@ function Contact() {
 
         <div>
 
-          <p>Reach me through social media:</p>
+          <p>Reach me through on:</p>
 
           <div className='github-linkedin-container'>
             <a href="https://github.com/hikmat-aliyev" target="_blank" rel="noopener noreferrer">
