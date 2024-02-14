@@ -1,30 +1,45 @@
 .about-page-container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid green;
-  gap: 4rem;
-}
-
-.about-elements-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
-  gap: 2rem;
+  align-items: center;
+  gap: 4rem;
+}
+
+
+.about-elements-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+@media (max-width: 820px) {
+  .about-elements-container {
+    flex-direction: column;
+  }
 }
 
 .about-header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  width: 100%;
+  gap: 2rem;
 }
 
 .about-header-container > span {
   border-bottom: 0.3px solid var(--primary-font-color);
   height: 0.1px;
-  width: 92%;
+  width: 88%;
+}
+
+.text-slide-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .emoji-about-me-text-container {
@@ -38,64 +53,18 @@
 }
 
 .emoji-image {
-  border-radius: 40%;
+  border-radius: 50%;
   width: 450px;
-  height: 340px;
+  height: 350px;
   box-shadow: 4px 4px 8px rgba(182, 182, 182, 0.44);
 }
 
-/* .slide-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid red;
-  width: 500px;
-}
-
-.marquee-w {
-  border: 1px solid green;
-  display: block;
-  width: 500px;
-  height: 100px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-}
-.marquee {
-  position: absolute;
-  display: block;
-  margin: auto auto;
-  white-space: nowrap;
-  overflow: hidden;
-  min-width: 100%;
-  height: 100%;
-}
-.marquee span {
-  display: inline-block;
-  padding-left: 100%;
-  text-align: center;
-  white-space: nowrap;
-  min-width: 100%;
-  height: 100%;
-  line-height: 140px;
-  font-size: 2rem;
-  animation: marquee 8s linear infinite;
-  letter-spacing: 4px;
-}
-.marquee2 span {
-  animation-delay: 4s;
-}
-@keyframes marquee {
-  0% {
-      transform: translate(0, 0);
+@media (max-width: 700px) {
+  .emoji-image{
+    width: 60vw;
+    height: 200px;
   }
-  100% {
-      transform: translate(-100%, 0);
-  }
-} */
+}
 
 
 .slide-container {
@@ -104,40 +73,76 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  width: 450px;
   overflow: hidden;
+  gap: 1.2rem;
 }
 
-.marquee-w {
-  display: flex;
-  width: 100%;
-  flex-wrap: nowrap;
-  overflow: hidden;
+.i-am-header {
+  font-size: 1.7rem;
 }
+
 
 .marquee {
-  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  width: 360px;
   overflow: hidden;
-  min-width: 100%;
+  margin-top: 25px;
+  position: relative;
+}
+
+@media (max-width: 820px) {
+  .slide-container{
+    width: 80vw;
+  }
+  .marquee {
+    width: 70vw;
+    margin-top: 15px;
+  }
+}
+
+.marquee::before, .marquee::after{
+  content: '';
+  position: absolute;
   height: 100%;
-  animation: marquee 6s linear infinite;
+  width: 40px;
+  z-index: 10;
+  top: 0;
 }
 
-.marquee > span {
-  font-size: 2rem;
-  display: inline-block; /* Added to ensure proper inline block rendering */
-  letter-spacing: 3px;
+.marquee::before{
+  left: 0;
+  background-image: linear-gradient(to right, rgb(27, 27, 27), transparent);
 }
 
-.marquee2 span {
-  animation-delay: 3s;
+.marquee::after {
+  right: 0;
+  background-image: linear-gradient(to left, rgb(27, 27, 27), transparent);
 }
 
-@keyframes marquee {
+
+.marquee-1st-text, .marquee-2nd-text, .marquee-3rd-text {
+  color: aliceblue;
+  font-size: 1.6rem;
+  font-family: 'Big Shoulders Stencil Display', cursive;
+  white-space: nowrap;
+}
+
+.marquee-1st-text, .marquee-3rd-text{
+  animation: scrollText 8s linear infinite;
+} 
+
+.marquee-2nd-text {
+  animation: scrollText 9s linear infinite reverse;
+}
+
+@keyframes scrollText {
   0% {
-      transform: translate(0, 0);
+    transform: translateX(0);
   }
   100% {
-      transform: translate(-100%, 0);
+    transform: translateX(-50%);
   }
 }
+

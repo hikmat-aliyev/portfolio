@@ -1,0 +1,86 @@
+.skills-page {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+
+.skills-container {
+  display: flex;
+  gap: 5rem;
+}
+
+.skills-header-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+.skills-header-container > span {
+  border-bottom: 0.3px solid var(--primary-font-color);
+  height: 0.1px;
+  width: 60vw;
+}
+
+.single-skill-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.front-end-container, .back-end-container, .miscellaneous-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 26vw;
+}
+
+.front-end-skills, .back-end-skills, .miscellaneous-skills {
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  border-radius: 10px;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+@media (max-width: 821px) {
+  .skills-container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .front-end-container, .back-end-container, .miscellaneous-container{
+    width: 80vw;
+  }
+
+  .front-end-skills, .back-end-skills, .miscellaneous-skills{
+    height: 500px;
+  }
+}
+
+.single-skill-container > h4 {
+  font-family: "Dosis", sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+svg {
+  opacity: 0.8;
+  transition: transform 0.3s ease-in-out;
+  width: 4rem;
+  height: 4rem;
+}
+
+svg:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}

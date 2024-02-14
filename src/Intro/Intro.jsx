@@ -4,7 +4,7 @@ function Intro() {
 
   const handleScroll = () => {
     // Calculate the height of the viewport
-    const viewportHeight = window.innerHeight + 30;
+    const viewportHeight = window.innerHeight;
 
     // Scroll to the end of the viewport (next page)
     window.scrollTo({
