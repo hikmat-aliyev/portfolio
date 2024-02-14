@@ -39,8 +39,8 @@ function About() {
             </div>
 
             <div className="marquee">
-                <span className='marquee-3rd-text'>Front-end Developer - Front-end Developer -
-                Front-end Developer -  Front-end Developer -&nbsp;&nbsp;&nbsp;</span>
+                <span className='marquee-3rd-text'>Server-side Engineer - Server-side Engineer -
+                Server-side Engineer -  Server-side Engineer -&nbsp;&nbsp;&nbsp;</span>
             </div>
           </div>
         </div>
