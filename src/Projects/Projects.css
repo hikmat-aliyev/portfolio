@@ -140,6 +140,10 @@
   .project-container{
     flex-direction: column;
   }
+
+  .reverse {
+    flex-direction: column-reverse;
+  }
   
   .slider > img {
     width: 90vw;

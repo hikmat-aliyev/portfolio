@@ -25,7 +25,6 @@ function Projects() {
       <div className='projects-container'>
 
         <div className='project-container'>
-
           <div className='project-images-container'>
             <Slider>
               <div  className='slider'>
@@ -97,8 +96,7 @@ function Projects() {
         </div>
 
 
-        <div className='project-container'>
-    
+        <div className='project-container reverse'>
           <div className='project-info'>
               <h3>Gasper</h3>
               <div className='project-tools'>
@@ -173,7 +171,6 @@ function Projects() {
         </div>
 
         <div className='project-container'>
-
           <div className='project-images-container'>
             <Slider>
               <div  className='slider'>
@@ -244,7 +241,6 @@ function Projects() {
                 </a>
               </div>
           </div>
-
         </div>
         
       </div>
