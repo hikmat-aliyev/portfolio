@@ -58,12 +58,15 @@
     align-items: center;
     justify-content: center;
   }
+  
   .front-end-container, .back-end-container, .miscellaneous-container{
     width: 80vw;
+    height: max-content;
   }
 
   .front-end-skills, .back-end-skills, .miscellaneous-skills{
-    height: 500px;
+    height: max-content;
+    padding: 1rem;
   }
 }
 
