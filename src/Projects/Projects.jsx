@@ -88,7 +88,7 @@ function Projects() {
                 <a href="https://github.com/hikmat-aliyev/friend-sync2" target="_blank" rel="noopener noreferrer">
                   <button>Review the code</button>
                 </a>
-                <a href="https://link-to-live-app" target="_blank" rel="noopener noreferrer">
+                <a href="https://friend-sync.vercel.app/" target="_blank" rel="noopener noreferrer">
                   <button>See it live</button>
                 </a>
               </div>
