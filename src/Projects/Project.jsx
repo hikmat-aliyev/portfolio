@@ -3,10 +3,11 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-function Project({projectImg1, projectImg2, projectName, tools, projectDescription, githubLink, projectWebsite}) {
+function Project({projectImg1, projectImg2, projectName, tools, projectDescription, 
+                  githubLink, projectWebsite, reverse}) {
   return (
-    <div className='project-container'>
-        <div className='project-images-container'>
+    <div className={`project-container ${reverse ? 'reverse' : ''}`}>
+       {!reverse && <div className='project-images-container'>
           <Slider>
             <div  className='slider'>
               <img src={projectImg1} />
@@ -15,7 +16,7 @@ function Project({projectImg1, projectImg2, projectName, tools, projectDescripti
               <img src={projectImg2}/>
             </div>
           </Slider>
-        </div>
+        </div>}
   
         <div className='project-info'>
             <h3>{projectName}</h3>
@@ -37,6 +38,18 @@ function Project({projectImg1, projectImg2, projectName, tools, projectDescripti
               </a>
             </div>
         </div>
+
+        {reverse && <div className='project-images-container'>
+          <Slider>
+            <div  className='slider'>
+              <img src={projectImg1} />
+            </div>
+            <div  className='slider'>
+              <img src={projectImg2}/>
+            </div>
+          </Slider>
+        </div>}
+
     </div>
   )
 }

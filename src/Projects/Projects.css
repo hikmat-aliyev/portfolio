@@ -27,17 +27,15 @@
 }
 
 
-.project-images-container { 
+.project-images-container, .slider > img { 
   width: 900px;
-  height: 700px; 
+  height: 720px; 
+  border-radius: 15px;
 }
 
 
 .slider > img {
-  width: 960px;
-  height: 750px;
   opacity: 0.9;
-  border-radius: 5px;
 }
 
 

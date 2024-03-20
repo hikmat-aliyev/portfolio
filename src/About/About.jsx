@@ -4,7 +4,7 @@ import emoji3 from '../assets/emoji-img-3.png'
 
 function About() {
   return(
-    <div className='about-page-container'>
+    <div id='about' className='about-page-container'>
       
       <div className='about-header-container'>
           <h3>About</h3>
