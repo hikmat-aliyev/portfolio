@@ -1,7 +1,7 @@
 import friendSyncLogin from '../assets/friendSync-login.png'
 import friendSyncHome from '../assets/friendSync-home.png'
-import eCommerceFront from '../assets/e-commerce-front.png'
-import eCommerceBack from '../assets/e-commerce-back.png'
+import scraperFront from '../assets/priceeyefront.png'
+import scraperBack from '../assets/priceeyeback.png'
 import memoryCardFront from '../assets/memory-card-front.png'
 import memoryCardBack from '../assets/memory-card-back.png'
 import brainwaveFront from '../assets/brainwaveFront.png'
@@ -9,7 +9,7 @@ import brainwaveBack from '../assets/brainwaveBack.png'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Projects.css'
-import { mongoDB, nodeJS, express, react, javaScript, css, html, tailwindCSS} from '../ProjectTools/ToolsSVGs'
+import { mongoDB, nodeJS, express, react, javaScript, css, html, tailwindCSS, nextJS, typeScript} from '../ProjectTools/ToolsSVGs'
 import Project from './Project'
 
 function Projects() {
@@ -23,40 +23,57 @@ function Projects() {
       </div>
 
       <div className='projects-container'>
+        
+      <Project projectName={'Amazon Web Scraper'} 
+                projectImg1={scraperFront} 
+                projectImg2={scraperBack}
+                projectDescription= {(
+                  <>
+                    A web application that allows users to search and track Amazon products, receiving real-time updates on stock and price changes. Built with <strong>Next.js</strong> for seamless performance, utilizing <strong>Bright Data</strong> for web scraping, and <strong>cron-job.org</strong> to schedule periodic product updates.
+                  </>
+                )}
+                tools={[nextJS, typeScript, tailwindCSS]}
+                projectWebsite={'https://amazon-webscraperr.vercel.app/'}
+                githubLink={'https://github.com/hikmat-aliyev/amazon-scraper'}
+                /> 
 
         <Project projectName={'FriendSync'} 
                 projectImg1={friendSyncHome} 
                 projectImg2={friendSyncLogin}
-                projectDescription={"A fully functional social media app where users can connect with others by sending friend requests, share posts about their lives, like and comment to other users' posts. This app is developed by using MERN stack."}
+                projectDescription={(
+                  <>
+                    A fully functional social media application where users can connect by sending friend requests, share posts, and engage with others by liking and commenting on posts. Built with the <strong>MERN</strong> stack for seamless, full-stack development.
+                  </>
+                )}
                 tools={[react, nodeJS, mongoDB, express]}
                 projectWebsite={'https://friend-sync.vercel.app/'}
                 githubLink={'https://github.com/hikmat-aliyev/friend-sync2'}
-                />
+                reverse={true}/>
         
         <Project projectName={'Brainwave landing page'} 
                 projectImg1={brainwaveFront} 
                 projectImg2={brainwaveBack}
-                projectDescription={"Brainwave - Modern UI/UX website, developed using React.js and Tailwind CSS, exemplifies modern UI/UX principles. Its sleek design, seamless animations, and overall user experience set a high standard, serving as a reference or inspiration for future modern applications or websites in general."}
+                projectDescription={(
+                  <>
+                    Brainwave - Modern UI/UX website, developed using <strong>React.js</strong> and <strong>Tailwind CSS</strong>, exemplifies modern <strong>UI/UX</strong> principles. Its sleek design, seamless animations, and overall user experience set a high standard, serving as a reference or inspiration for future modern applications or websites in general.
+                  </>
+                )}
                 tools={[react, tailwindCSS, javaScript]}
                 projectWebsite={'https://brainwave-cyan.vercel.app/'}
                 githubLink={'https://github.com/hikmat-aliyev/brainwave-landing-page'}
-                reverse={true}/> 
+               /> 
 
-        <Project projectName={'Gasper'} 
-                projectImg1={eCommerceFront} 
-                projectImg2={eCommerceBack}
-                projectDescription={"An e-commerce website where users can search for different products, see information about them, and add it to the basket to proceed the order. This app is developed by using React framework."}
-                tools={[react, html, css, javaScript]}
-                projectWebsite={'https://e-commerce-app-one-sage.vercel.app/'}
-                githubLink={'https://github.com/hikmat-aliyev/e-commerce-app'}
-                /> 
         
         <Project projectName={'Rick and Morty game'} 
                 projectImg1={memoryCardFront} 
                 projectImg2={memoryCardBack}
-                projectDescription={"Memory card game where you have to choose the card only once, otherwise you lose. There are 3 difficulty levels. This app is developed by vanilla JS, CSS, HTML and React framework."}
+                projectDescription= {(
+                  <>
+                    A memory card game where players must select each card only once—choosing a card twice results in a loss. The game features three difficulty levels and is built using vanilla <strong>JavaScript,</strong> <strong>CSS,</strong> <strong>HTML</strong> and <strong>React</strong>.
+                  </>
+                )}
                 tools={[react, html, css, javaScript]}
-                projectWebsite={'https://github.com/hikmat-aliyev/memory-card-game'}
+                projectWebsite={'https://rickandmortymemogame.netlify.app/'}
                 githubLink={'https://github.com/hikmat-aliyev/memory-card-game'}
                 reverse={true}/> 
         
